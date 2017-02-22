@@ -7,6 +7,28 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         <TextBlock Text="Cash Machine" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="28"/>
+        <Button Height="50" Width="200" VerticalAlignment="Bottom" Background="AliceBlue" Content="GetProucts" Click="Button_Click"/>
+        <ListBox Grid.Row="1" Background="Transparent" ItemsSource="{Binding Products}" BorderThickness="0">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Margin="0" Grid.Column="0" Foreground="White" Text="{Binding ID}"/>
+                        <TextBlock Margin="10, 0" Grid.Column="1" Foreground="White" Text="{Binding Name}"/>
+                        <TextBlock Margin="10, 0" Grid.Column="2" Foreground="White" Text="{Binding PurchasePrice}"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>
