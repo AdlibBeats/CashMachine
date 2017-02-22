@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CashMachine"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+    <Grid Background="Black">
+        <TextBlock Text="Cash Machine" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="28"/>
     </Grid>
 </Window>
